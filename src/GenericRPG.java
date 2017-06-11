@@ -5,7 +5,8 @@ import javax.swing.JPanel;
 
 public class GenericRPG {
 	JFrame GameFrame;
-	JPanel GamePanel;
+	JPanel GP;
+	GamePanel GamePanel;
 	
 	public static final int Hight = 750;
 public static final int Width = 750;
@@ -15,15 +16,17 @@ public static final int Width = 750;
 }
 	GenericRPG(){
 		GameFrame=new JFrame();
-		GamePanel=new JPanel();
-		Setup();
+		GP=new JPanel();
+		GamePanel = new GamePanel();
 		}
 
 void Setup(){
-	//GameFrame.addKeyListener(GamePanel);
+	GameFrame.addKeyListener(GamePanel);
 	GameFrame.add(GamePanel);
 	GameFrame.setVisible(true);
 	GameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	GameFrame.setSize(Width, Hight);
+	GameFrame.setResizable(false);
 	
 } 
 }

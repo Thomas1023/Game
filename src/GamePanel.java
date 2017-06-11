@@ -6,29 +6,45 @@ import java.awt.event.KeyListener;
 import javax.swing.JPanel;
 
 public class GamePanel extends JPanel implements ActionListener, KeyListener {
-
-	@Override
-	public void keyPressed(KeyEvent SPACE) {
-		System.out.println("pressed");
-	}
-
-	@Override
+	boolean left = false;
+	boolean right = false;
+	boolean up = false;
+	boolean down = false;
+	boolean jump = false;
 	public void keyReleased(KeyEvent e) {
-		System.out.println("Released");
+		if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+			left = true;
+		}
+		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+			right = true;
+		}
+		if (e.getKeyCode() == KeyEvent.VK_UP) {
+			up = true;
+		}
+		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+			down = true;
+		}
+		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+			jump = true;
+		}
 		
 	}
-
-	@Override
+	
 	public void keyTyped(KeyEvent e) {
-		System.out.println("Typed");
+		// TODO Auto-generated method stub
 		
 	}
-
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("Preformed");
+		// TODO Auto-generated method stub
 		
 	}
 
+	
 
 }
