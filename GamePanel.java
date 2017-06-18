@@ -11,6 +11,8 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 	boolean up = false;
 	boolean down = false;
 	boolean jump = false;
+
+	
 	public void keyReleased(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 			left = false;
@@ -79,4 +81,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 		e.printStackTrace();
 	}
  }
-}
+ 
+ 
+ }
